@@ -1,3 +1,5 @@
+import calendar
+from datetime import datetime
 import streamlit as st
 import pandas as pd
 
@@ -8,14 +10,8 @@ Try this absolutely innovative app!
 
 """)
 
-# https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
-#define the ticker symbol
-tickerSymbol = 'Expense'
-#get data on this ticker
-#tickerData = yf.Ticker(tickerSymbol)
-#get the historical prices for this ticker
-#tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
-# Open	High	Low	Close	Volume	Dividends	Stock Splits
+page_title = "Expense Tracker App"
+layout = "centered"
 
-#st.line_chart(tickerDf.Close)
-#st.line_chart(tickerDf.Volume)
+st.set_page_config(page_title = page_title, page_icon=page_icon, layout=layout)
+st.title(page_title)
